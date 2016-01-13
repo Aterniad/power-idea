@@ -1,0 +1,47 @@
+<idea-plugin version="2">
+  <id>com.power.idea.entertainment</id>
+  <name>PowerIDEA</name>
+  <version>0.6</version>
+  <vendor email="darth.saracen@gmail.com" url="http://vk.com/darth_saracen">Mikhail Lobanov</vendor>
+
+  <description><![CDATA[
+      Uhm... it's just epic
+    ]]></description>
+
+  <change-notes><![CDATA[
+      First version, no any changes :)
+    ]]>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <typedHandler implementation="epic_code.EpicCodeDelegate"/>
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+
+    <action id="EpicCodeActionBangBang" class="epic_code.EpicCodeAction" text="Toggle Epic Code" description="DO THE BANG">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+
+  </actions>
+
+</idea-plugin>
